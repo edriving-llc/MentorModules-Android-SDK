@@ -34,7 +34,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     public static final int PERMISSIONS_RESULT = 1500;
-    private static final String clientDebugKey  = "DSTj47MD3E59wdFrqdFsvJ4IMAgXoanXq2edW6Ipw"; //"DG74r0xUfPb91d63lzL6Wd8C2N2hS529s9OZHYYaC";
+    private static final String clientDebugKey  = "SSTj47MD3E59wdFrqdFsvJ4IMAgXoanXq2edW6Ipw";
     private MentorModuleProvider moduleProvider;
     private ProgressBar progressBar;
     private Button login;
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<MentorModule> mentorModules) {
             super.onPostExecute(mentorModules);
-            progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.INVISIBLE);
             login.setEnabled(true);
             if(mentorModules!=null) {
                 Log.d(TAG,"Result:"+mentorModules.size());
